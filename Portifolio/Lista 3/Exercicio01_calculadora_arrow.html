@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora Arrow Function</h1>
+
+    <script>
+        const soma = (a, b) => a + b;
+        const subtracao = (a, b) => a - b;
+        const multiplicacao = (a, b) => a * b;
+        const divisao = (a, b) => b !== 0 ? a / b : 'Erro: Divisão por zero';
+
+        const numero1 = parseFloat(prompt("Digite o primeiro número:"));
+        const numero2 = parseFloat(prompt("Digite o segundo número:"));
+        const operacao = parseInt(prompt("Escolha a operação (1 - Soma, 2 - Subtração, 3 - Multiplicação, 4 - Divisão):"));
+
+        if (operacao === 1) {
+                resultado = soma(numero1, numero2);
+            } else if (operacao === 2) {
+                resultado = subtracao(numero1, numero2);
+            } else if (operacao === 3) {
+                resultado = multiplicacao(numero1, numero2);
+            } else if (operacao === 4) {
+                resultado = divisao(numero1, numero2);
+            } else {
+                resultado = 'Operação inválida. Escolha um número entre 1 e 4.';
+            }
+            
+        document.write(`<p>Resultado: ${resultado}</p>`);
+
+
+    </script>
+    
+</body>
+</html>

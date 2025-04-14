@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Criar um programa que peça três números e exiba-os em ordem crescente</h1>
+
+    <script>
+        const ordenar_numeros = (num1, num2, num3) => {
+            const numeros = [num1, num2, num3];
+            
+            numeros.sort((a, b) => a - b);
+            
+            return numeros.join(', ');
+        };
+
+        const num1 = parseFloat(prompt("Digite o primeiro número:"));
+        const num2 = parseFloat(prompt("Digite o segundo número:"));
+        const num3 = parseFloat(prompt("Digite o terceiro número:"));
+
+        const resultado = ordenar_numeros(num1, num2, num3);
+        document.write(`<p>Números em ordem crescente: ${resultado}</p>`);
+    </script>
+</body>
+</html>

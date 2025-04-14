@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Desenvolva um programa que leia 10 números e apresente os valores pares.</h1>
+
+    <script>
+        const numeros = [];
+        const pares = [];
+      
+        for (let i = 0; i < 10; i++) {
+          const num = parseInt(prompt(`Digite o número ${i + 1}:`));
+          numeros.push(num);
+      
+          if (num % 2 === 0) {
+            pares.push(num);
+          }
+        }
+      
+        if (pares.length > 0) {
+          document.write("<p>Números pares digitados:</p>");
+          for (let i = 0; i < pares.length; i++) {
+            document.write(`<p>${pares[i]}</p>`);
+          }
+        } else {
+          document.write("<p>Todos os números são ímpares.</p>");
+        }
+      </script>
+</body>
+</html>

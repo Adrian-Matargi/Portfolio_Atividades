@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercicio 2</h1>
+    <h2>Desenvolva um programa que a partir de um vetor de inteiros com 8 valores inicializados na declaração apresente a média aritméticas desses valores.</h2>
+
+    <script>
+        let valores = [5, 10, 15, 20, 25, 30, 35, 40];
+
+        let soma = 0;
+
+        for (let i = 0; i < valores.length; i++) {
+            soma += valores[i];
+        }
+
+        let media = soma / valores.length;
+        
+        document.writeln(`Os valores são ${valores}<p>`)
+        document.write(`A média aritmética dos valores é: ${media}`);
+    </script>
+</body>
+</html>

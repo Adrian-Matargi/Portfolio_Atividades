@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Criar um programa que peça um número e exiba sua raiz quadrada</h1>
+
+    <script>
+        const calcular_raiz = (numero) => Math.sqrt(numero);
+
+        const numero = parseFloat(prompt("Digite um número:"));
+        const raiz = calcular_raiz(numero);
+        document.write(`<p>A raiz quadrada de ${numero} é ${raiz.toFixed(2)}</p>`);
+
+    </script>
+</body>
+</html>

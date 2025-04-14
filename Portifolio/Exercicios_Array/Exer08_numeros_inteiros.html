@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Armazene em um vetor A e Carregue um vetor B</h1>
+
+  <script>
+    const A = [];
+    const B = [];
+  
+    for (let i = 0; i < 6; i++) {
+      const numero = parseInt(prompt(`Digite o ${i + 1}º número inteiro:`));
+      A.push(numero);
+      B.push(numero / 2);
+    }
+  
+    document.write("<p>Vetor A:</p>");
+    document.write(`<p>${A.join(", ")}</p>`);
+    
+    document.write("<p>Vetor B:</p>");
+    document.write(`<p>${B.join(", ")}</p>`);
+  </script>
+</body>
+</html>

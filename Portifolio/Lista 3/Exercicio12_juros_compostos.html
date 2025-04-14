@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calcular Juros Compostos</h1>
+
+    <script>
+        const calcularJurosCompostos = (capital, taxa, meses) => {
+          return capital * Math.pow((1 + taxa / 100), meses);
+        };
+      
+        const capital = parseFloat(prompt("Digite o capital inicial (R$):"));
+        const taxa = parseFloat(prompt("Digite a taxa de juros ao mês (%):"));
+        const meses = parseInt(prompt("Digite o tempo em meses:"));
+      
+        const montante = calcularJurosCompostos(capital, taxa, meses);
+        const juros = montante - capital;
+      
+        document.write(`<p>Capital Inicial: R$ ${capital.toFixed(2)}</p>`);
+        document.write(`<p>Taxa de Juros: ${taxa}% ao mês</p>`);
+        document.write(`<p>Tempo: ${meses} meses</p>`);
+        document.write(`<p>Montante Final: R$ ${montante.toFixed(2)}</p>`);
+        document.write(`<p>Juros Totais: R$ ${juros.toFixed(2)}</p>`);
+      </script>
+      
+</body>
+</html>

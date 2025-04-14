@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pedir um nome e imprimir cada letra separadamente</h1>
+
+    <script>
+        const letras_separadas = (nome) => {
+            for (let i = 0; i < nome.length; i++) {
+                document.write(`<p>${nome[i]}</p>`);
+            }
+        };
+
+        const nome = prompt("Digite seu nome:");
+
+        if (nome) {
+            letras_separadas(nome);
+        } else {
+            document.write("<p>Você não digitou um nome.</p>");
+        }
+    </script>
+</body>
+</html>

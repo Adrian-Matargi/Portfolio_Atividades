@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Criar um programa que peça um valor e exiba quantas cédulas de R$200, R$100, R$50, R$20, R$10, R$5 e R$1 seriam necessárias para formar esse valor</h1>
+
+    <script>
+         const calcular = (valor) => {
+      const cedulas = [200, 100, 50, 20, 10, 5, 1];
+      document.write(`<p>Valor informado: R$${valor}</p>`);
+
+      cedulas.forEach(i => {
+        const qtd = Math.floor(valor / i);
+        if (qtd > 0) {
+          document.write(` ${qtd} cédula(s) de R$${i}<br>`);
+          valor %= i;
+        }
+      });
+    };
+
+    const valor = parseFloat(prompt("Digite um valor em reais:"));
+    calcular(valor);
+    </script>
+</body>
+</html>

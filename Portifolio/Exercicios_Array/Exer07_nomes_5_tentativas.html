@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pesquisa de Nomes</h1>
+
+    <h2>Buscar Nome</h2>
+
+    <label for="nome">Digite um nome (até 5 tentativas):</label>
+    <input type="text" id="nome">
+    <button id="botaoProcurar">Procurar</button>
+
+    <p id="resultado"></p>
+
+  <script>
+    const nomes = ['Ana', 'Bruno', 'Gabi', 'Francisca', 'Nicolas', 'Fernanda', 'Gustavo', 'Kauan', 'Kamila', 'Dorival'];
+    let tentativas = 0;
+    const maxTentativas = 5;
+
+    document.getElementById("botaoProcurar").onclick = () => {
+      const nomeProcurado = document.getElementById("nome").value;
+      const resultado = document.getElementById("resultado");
+
+      tentativas++;
+
+      const indice = nomes.indexOf(nomeProcurado);
+
+      if (indice !== -1) {
+        resultado.innerHTML = `✅ Nome encontrado na posição ${indice} na tentativa ${tentativas}.`;
+        document.getElementById("botaoProcurar").disabled = true;
+        document.getElementById("nome").disabled = true;
+      } else if (tentativas < maxTentativas) {
+        resultado.innerHTML = `❌ Nome não encontrado. Tentativa ${tentativas} de ${maxTentativas}.`;
+      } else {
+        resultado.innerHTML = "❌ Tentativas esgotadas. Nome não encontrado!";
+        document.getElementById("botaoProcurar").disabled = true;
+        document.getElementById("nome").disabled = true;
+      }
+    };
+  </script>
+</body>
+</html>

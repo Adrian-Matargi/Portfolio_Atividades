@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora de INSS</h1>
+
+    <script>
+        const calcular_INSS = (salario, aliquota) => salario * (aliquota / 100);
+      
+        const salario = parseFloat(prompt("Digite o salário:"));
+        const aliquota = parseFloat(prompt("Digite a alíquota (%):"));
+    
+          const inss = calcular_INSS(salario, aliquota);
+          document.write(`<p>Salário: R$ ${salario.toFixed(2)}</p>`);
+          document.write(`<p>Alíquota: ${aliquota}%</p>`);
+          document.write(`<p>Valor do INSS: R$ ${inss.toFixed(2)}</p>`);
+
+      </script>
+</body>
+</html>

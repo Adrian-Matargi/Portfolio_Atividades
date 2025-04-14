@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Pedra, Papel e Tesoura</title>
+</head>
+<body>
+    <h1>Exercícios de Fixação 11</h1>
+
+    <script>
+        let jogadorEscolha = prompt("Escolha: pedra, papel ou tesoura").toLowerCase();
+
+        while (!['pedra', 'papel', 'tesoura'].includes(jogadorEscolha)) {
+            alert("Escolha inválida! Tente novamente.");
+            jogadorEscolha = prompt("Escolha: pedra, papel ou tesoura").toLowerCase();
+        }
+
+        const opcoes = ['pedra', 'papel', 'tesoura'];
+        const computadorEscolha = opcoes[Math.floor(Math.random() * 3)];
+
+        let resultado;
+        if (jogadorEscolha === computadorEscolha) {
+            resultado = "empate";
+        } else if (
+            (jogadorEscolha === 'pedra' && computadorEscolha === 'tesoura') ||
+            (jogadorEscolha === 'papel' && computadorEscolha === 'pedra') ||
+            (jogadorEscolha === 'tesoura' && computadorEscolha === 'papel')
+        ) {
+            resultado = "você venceu";
+        } else {
+            resultado = "o computador venceu";
+        }
+
+        document.write(`Você escolheu ${jogadorEscolha}. \nO computador escolheu ${computadorEscolha}. \nResultado: ${resultado}`);
+    </script>
+</body>
+</html>

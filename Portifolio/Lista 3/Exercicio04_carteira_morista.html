@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pedir a idade e dizer se a pessoa pode tirar carteira de motorista</h1>
+
+    <script>
+        const maior_idade = (idade) =>{
+            if (idade >= 18){
+                return "Você pode tirar carteira de motorista"
+            }else {
+                return "Você não pode tirar carteira de motorista"
+            }
+        };
+
+        const idade = parseInt(prompt("Qual é a sua idade?"));
+
+        if (idade <= 0) {
+            document.write("<p>Insira uma idade válida.</p>");
+        } else {
+            const resultado = verificarCarteira(idade);
+            document.write(`<p>${resultado}</p>`);
+        }    
+    
+    </script>
+</body>
+</html>

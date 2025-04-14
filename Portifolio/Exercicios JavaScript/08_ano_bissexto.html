@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercícios de Fixação 08</h1>
+
+    <script>
+        let ano = Number(prompt("Digite o Ano: "))
+        const ultimos_num = String(ano).slice(-2);
+
+        if (ultimos_num !== "00" && ano % 4 == 0) {
+            document.write("O ano é Bissexto")
+        }
+        else if (ultimos_num === "00" && ano % 400 == 0){
+            document.write("O ano é Bissexto")
+        }
+        else {
+            document.write("O ano não é Bissexto")
+        }
+
+    </script>
+</body>
+</html>

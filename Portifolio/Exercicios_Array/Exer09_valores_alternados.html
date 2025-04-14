@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Carregue e apresente um vetor C com os valores de A e B alternados.</h1>
+
+    <script>
+        const A = [];
+        const B = [];
+        const C = [];
+      
+        for (let i = 0; i < 5; i++) {
+          const numero = parseInt(prompt(`Digite o ${i + 1}º número para o vetor A:`));
+          A.push(numero);
+        }
+      
+        for (let i = 0; i < 5; i++) {
+          const numero = parseInt(prompt(`Digite o ${i + 1}º número para o vetor B:`));
+          B.push(numero);
+        }
+      
+        for (let i = 0; i < 5; i++) {
+          C.push(A[i]);
+          C.push(B[i]);
+        }
+      
+        document.write("<p>Vetor A (valores digitados para A):</p>");
+        document.write(`<p>${A.join(", ")}</p>`);
+      
+        document.write("<p>Vetor B (valores digitados para B):</p>");
+        document.write(`<p>${B.join(", ")}</p>`);
+      
+        document.write("<p>Vetor C (valores alternados de A e B):</p>");
+        document.write(`<p>${C.join(", ")}</p>`);
+      </script>
+</body>
+</html>

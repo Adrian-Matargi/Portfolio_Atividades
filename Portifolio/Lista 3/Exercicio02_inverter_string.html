@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Iverta uma string informada pelo usuário</h1>
+
+    <script>
+        
+        const inverter = (str) => str.split('').reverse().join('');
+
+        const entrada = prompt("Digite uma string para inverter:");
+
+        resultado = inverter(entrada);
+        document.write(`<p>Resultado: ${resultado}</p>`);
+
+    </script>
+</body>
+</html>

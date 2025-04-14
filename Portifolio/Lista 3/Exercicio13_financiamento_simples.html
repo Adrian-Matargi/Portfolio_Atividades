@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simular Financiamento: Calcule o valor das parcelas de um financiamento</h1>
+
+    <script>
+        const calcular_parcela = (valor, taxa, parcelas) => {
+          const i = taxa / 100;
+          return (valor * i) / (1 - Math.pow(1 + i, -parcelas));
+        };
+      
+        const valor = parseFloat(prompt("Digite o valor do financiamento (R$):"));
+        const taxa = parseFloat(prompt("Digite a taxa de juros mensal (%):"));
+        const parcelas = parseInt(prompt("Digite o número de parcelas:"));
+      
+        const parcela = calcular_parcela(valor, taxa, parcelas);
+        const totalPago = parcela * parcelas;
+        const totalJuros = totalPago - valor;
+      
+        document.write(`<p>Valor Financiado: R$ ${valor.toFixed(2)}</p>`);
+        document.write(`<p>Taxa de Juros: ${taxa}% ao mês</p>`);
+        document.write(`<p>Número de Parcelas: ${parcelas}</p>`);
+        document.write(`<p>Valor da Parcela: R$ ${parcela.toFixed(2)}</p>`);
+        document.write(`<p>Total Pago: R$ ${totalPago.toFixed(2)}</p>`);
+        document.write(`<p>Total de Juros: R$ ${totalJuros.toFixed(2)}</p>`);
+      </script>
+      
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Desenvolva um programa que leia 8 números garantindo que os valores informados estejam entre 100 e 200 </h1>
+
+    <script>
+        const numeros = [];
+      
+        while (numeros.length < 8) {
+          const num = parseInt(prompt(`Digite o número ${numeros.length + 1} (entre 100 e 200):`));
+      
+          if (num >= 100 && num <= 200) {
+            numeros.push(num);
+          } else {
+            alert("Valor inválido. Digite um número entre 100 e 200.");
+          }
+        }
+      
+        document.write("<p>Valores armazenados:</p>");
+        for (let i = 0; i < numeros.length; i++) {
+          document.write(`<p>${numeros[i]}</p>`);
+        }
+      </script>
+</body>
+</html>
