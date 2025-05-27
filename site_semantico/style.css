@@ -1,0 +1,127 @@
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #111;
+    color: #f0f0f0;
+  }
+  
+  header, nav, main, section, article, aside, footer {
+    padding: 1rem;
+  }
+  
+  header {
+    background: #222;
+    text-align: center;
+  }
+  
+  nav {
+    background: #333;
+    text-align: center;
+  }
+  
+  nav a {
+    color: #f0f0f0;
+    margin: 0 1rem;
+    text-decoration: none;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    background: #1a1a1a;
+  }
+  
+  section {
+    flex: 2 1 600px;
+  }
+  
+  article {
+    background: #2a2a2a;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-left: 4px solid rgb(41, 80, 255);
+  }
+  
+  article img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+  }
+  
+  aside {
+    flex: 1 1 300px;
+    background: #2e2e2e;
+  }
+  
+  aside img.console-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+  }
+
+  aside figure {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  
+  aside figure img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  aside figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  
+  /* Grid para menções honrosas */
+.mencoes {
+    margin-top: 100px;
+}
+
+.honrosas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+  
+  .honrosas figure {
+    margin: 0;
+    text-align: center;
+  }
+  
+  .honrosas img {
+    width: 100%;
+    height: 175px;
+    border-radius: 4px;
+  }
+  
+  .honrosas figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #ccc;
+  }
+  
+  
+  footer {
+    background: #222;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  img{
+    width: 250px;
+    height: 313px;
+  }
+
+  .title-pag {
+    color: rgb(41, 80, 255);
+  }
